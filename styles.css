@@ -1,5 +1,6 @@
 body {
-  margin: 0 0;
+  margin: 0;
+  padding: 0;
 }
 
 .flex-container {
@@ -132,11 +133,14 @@ hr {
 .overlay.open li:nth-of-type(4) {
   animation-delay: .50s;
 }
+.overlay.open li:nth-of-type(5) {
+  animation-delay: .55s;
+}
 .overlay nav {
   position: relative;
   height: 500px;
   min-height: 500px;
-  margin-top: 20%;
+  margin-top: 15%;
   font-size: 50px;
   font-family: 'Spectral', serif;
   font-weight:700;
@@ -160,7 +164,7 @@ hr {
   height: calc(100% / 4);
   min-height: 50px;
   position: relative;
-  margin: -65px auto;
+  margin: -50px auto;
   opacity: 0;
 }
 .overlay ul li a {
@@ -174,11 +178,12 @@ hr {
 .overlay ul li a:hover:after, .overlay ul li a:focus:after, .overlay ul li a:active:after {
   width: 100%;
 }
+
 .overlay ul li a:after {
   content: '';
   position: absolute;
   bottom: 0;
-  left: 50%;
+  left: 0;
   width: 0%;
   transform: translateX(-50%);
   height: 3px;
@@ -260,10 +265,31 @@ hr {
            animation: fadeinDown 1.5s;
            z-index: 45;
 }
+.blog-textbox {
+  position: relative;
+  margin-top: 75px;
+  margin-bottom: 100px;
+  height: auto;
+  flex-basis: 400px;
+  max-width: 400px;
+  margin-right: 15%;
+  margin-left: 16%;
+  -webkit-animation: fadeinDown 1.5s; /* Safari, Chrome and Opera > 12.1 */
+      -moz-animation: fadeinDown 1.5s; /* Firefox < 16 */
+       -ms-animation: fadeinDown 1.5s; /* Internet Explorer */
+        -o-animation: fadeinDown 1.5s; /* Opera < 12.1 */
+           animation: fadeinDown 1.5s;
+           z-index: 45;
+}
+
 
 .services-textbox h2 {
   margin: 0;
 }
+.blog-textbox h2 {
+  margin: 0;
+}
+
 
 span .bullet {
   display: list-item;
@@ -308,6 +334,7 @@ h2 {
   line-height: 1.1;
 }
 
+
 h1 {
   font-family: 'Spectral', serif;
   font-size:80px;
@@ -322,7 +349,6 @@ p {
   color: #fff;
   display: block;
 }
-
 
 
 #left hr {
@@ -373,6 +399,33 @@ p {
   position:absolute;
   right: 0;
   overflow:hidden;
+  z-index: 1;
+}
+
+.photo-3 {
+  width: 20%;
+  min-width: 200px;
+  height: auto;
+  max-height: 300px;
+  float: left;
+  position: absolute;
+  bottom: 15%;
+  overflow: hidden;
+  margin-bottom: -5px;
+  z-index: 1;
+}
+
+.photo-4 {
+  width: 20%;
+  min-width: 200px;
+  height: auto;
+  max-height: 400px;
+  float: right;
+  right: 0;
+  position: absolute;
+  bottom: 0;
+  overflow: hidden;
+  margin-bottom: -5px;
   z-index: 1;
 }
 
@@ -546,7 +599,7 @@ input[type=submit] {
   transition: .5s;
 }
 
-/* When moving the mouse over the submit button, add a darker green color */
+/* When moving the mouse over the submit button */
 input[type=submit]:hover {
   background-color: #FFF;
   color: #000;
@@ -574,6 +627,10 @@ a {
   list-style: none;
   padding: 0;
 }
+.blog-textbox ul  {
+  list-style: none;
+  padding-left: 0;
+}
 ul .inner {
   padding-left: 15%;
   overflow: hidden;
@@ -595,6 +652,25 @@ ul .inner.show {
   margin: 0.5em 0;
   color: white;
 }
+.blog-textbox ul li {
+  margin: 0.5em 0 50px 0;
+  color: white;
+
+}
+.blog-textbox ul li h2:hover {
+  text-decoration: underline white;
+
+}
+.blog-textbox ul li h2:after {
+text-decoration: none;
+
+}
+
+.blog-textbox p a{
+  text-decoration: underline white;
+
+}
+
 ul li a.toggle {
   width: 100%;
   display: block;
@@ -707,6 +783,11 @@ ul li a.toggle:hover {
   margin-bottom: 30px;
   z-index: 45;
 }
+.blog-textbox {
+  margin-left: 8%;
+  margin-bottom: 30px;
+  z-index: 45;
+}
 p {
   font-size: 14px;
 }
@@ -738,11 +819,22 @@ body {
   bottom: 0;
 }
 
+.photo-4 {
+  margin-bottom: 100px;
+}
+
 .textbox {
   position: absolute;
   margin-left: 8%;
   z-index: 45;
 }
+
+
+
+.article p {
+  font-size: 16pt;
+}
+
 
 
 @media screen and (max-width: 600px) {
